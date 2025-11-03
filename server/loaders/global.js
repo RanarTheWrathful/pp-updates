@@ -22,28 +22,36 @@ global.travellingPlayers = [];
 global.fps = "Unknown";
 
 global.loadedAddons = [];
-global.TEAM_BLUE = -1;
-global.TEAM_GREEN = -2;
-global.TEAM_RED = -3;
-global.TEAM_PURPLE = -4;
-global.TEAM_YELLOW = -5;
-global.TEAM_ORANGE = -6;
-global.TEAM_BROWN = -7;
-global.TEAM_CYAN = -8;
-global.TEAM_DREADNOUGHTS = -10;
-global.TEAM_ROOM = -100;
-global.TEAM_ENEMIES = -101;
+global.TEAM_GUARDIANS = -1;
+global.TEAM_FALLEN = -2;
+global.TEAM_HIGHLORDS = -3;
+global.TEAM_VOIDLORDS = -4;
+global.TEAM_RENEWED = -5;
+global.TEAM_CRUSADERS = -6;
+global.TEAM_AETHER = -7;
+global.TEAM_ABYSS = -8;
+global.TEAM_DREADNOUGHTS = -9;
+global.TEAM_YELLOW = -10;
+global.TEAM_ORANGE = -11;
+global.TEAM_BROWN = -12;
+global.TEAM_CYAN = -13;
+global.TEAM_BLUE = -14;
+global.TEAM_GREEN = -15;
+global.TEAM_RED = -16;
+global.TEAM_PURPLE = -17;
+global.TEAM_NEUTRAL = -100;
+global.TEAM_ROOM = -101;
 global.getSpawnableArea = (team, gameManager) => {
     gameManager = ensureIsManager(gameManager);
     let room = gameManager.room;
     return ran.choose((team in room.spawnable && room.spawnable[team].length) ? room.spawnable[team] : room.spawnableDefault).randomInside();
 
 }
-global.teamNames = ["BLUE", "GREEN", "RED", "PURPLE", "YELLOW", "ORANGE", "BROWN", "CYAN"],
-global.teamColors = [10, 11, 12, 15, 25, 26, 27, 28];
-global.getTeamName = team => ["BLUE", "GREEN", "RED", "PURPLE", "YELLOW", "ORANGE", "BROWN", "CYAN", , "DREADNOUGHTS"][-team - 1] ?? "An unknown team";
+global.getTeamName = team => ["The Guardians", "The Fallen", "The Highlords", "The Voidlords", "The Renewed", "The Crusaders", "The Aether", "The Abyss", "Dreadnoughts", "Yellow", "Orange", "Brown", "Cyan", "Blue", "Green", "Red", "Purple"]
+global.teamColors = ['#96d4f3', '#bebebe', '#bbb196', 19, "#B865B4", "F2E8B8", "#F2E8B8", 19, 17, 25, 26, 27, 28, 10, 11, 12, 15];
+global.getTeamName = team => ["The Guardians", "The Fallen", "The Highlords", "The Voidlords", "The Renewed", "The Crusaders", "The Aether", "The Abyss", "Dreadnoughts", "Yellow", "Orange", "Brown", "Cyan", "Blue", "Green", "Red", "Purple"][-team - 1] ?? "An unknown team";
 global.getTeamColor = (team, fixMode = false) => {
-    let color = ([10, 11, 12, 15, 25, 26, 27, 28, , 4][-team - 1] ?? 3);
+    let color = (['#96d4f3', '#bebebe', '#bbb196', 19, "#B865B4", "F2E8B8", "#F2E8B8", 19, 17, 25, 26, 27, 28, 10, 11, 12, 15][-team - 1] ?? 3);
     if (fixMode) color = color + " 0 1 0 false";
     return color;
 }
