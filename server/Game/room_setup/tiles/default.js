@@ -21,8 +21,8 @@ tileClass.nest = new Tile({
     COLOR: "nest",
     NAME: "Nest Tile",
     INIT: (tile, room) => {
-        if (!room.spawnable[TEAM_ENEMIES]) room.spawnable[TEAM_ENEMIES] = [];
-        room.spawnable[TEAM_ENEMIES].push(tile);
+        if (!room.spawnable[TEAM_NEUTRAL]) room.spawnable[TEAM_NEUTRAL] = [];
+        room.spawnable[TEAM_NEUTRAL].push(tile);
     },
 });
 tileClass.wall = new Tile({
