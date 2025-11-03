@@ -3,7 +3,7 @@ module.exports = {
 
     // Game server domain.
     // If the host is 'localhost:NUMBER', the NUMBER must be the port setting.
-    host: "https://pp-updates.onrender.com",
+    host: "pp-updates.onrender.com/#loc",
 
     // Which port to run the web server on.
     port: 3000,
