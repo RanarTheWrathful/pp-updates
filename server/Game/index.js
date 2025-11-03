@@ -301,7 +301,7 @@ class gameHandler {
             const type = pickFromChanceSet(layeredSet);
             o.define(type);
             o.facing = ran.randomAngle();
-            o.team = TEAM_ENEMIES;
+            o.team = TEAM_NEUTRAL;
             o.isFood = true;
             return o;
         };
@@ -324,17 +324,17 @@ class gameHandler {
         };
 
         // Nest food/enemy spawn
-        if (Math.random() < 1 / 3 && global.gameManager.room.spawnable[TEAM_ENEMIES]) {
+        if (Math.random() < 1 / 3 && global.gameManager.room.spawnable[TEAM_NEUTRAL]) {
             // Enemy spawn
             if (Math.random() < 1 / 3 && this.enemyFoods.length < Config.ENEMY_CAP_NEST) {
-                const tile = ran.choose(global.gameManager.room.spawnable[TEAM_ENEMIES]).randomInside();
+                const tile = ran.choose(global.gameManager.room.spawnable[TEAM_NEUTRAL]).randomInside();
                 const o = spawnFoodEntity(tile, Config.ENEMY_TYPES_NEST);
                 this.enemyFoods.push(o);
                 setupCleanup(this.enemyFoods, o);
             }
             // Nest food spawn
             if (this.nestFoods.length < Config.FOOD_CAP_NEST) {
-                const tile = ran.choose(global.gameManager.room.spawnable[TEAM_ENEMIES]).randomInside();
+                const tile = ran.choose(global.gameManager.room.spawnable[TEAM_NEUTRAL]).randomInside();
                 for (let i = 0; i < totalFoods; i++) {
                     const o = spawnFoodEntity(tile, Config.FOOD_TYPES_NEST);
                     this.nestFoods.push(o);
@@ -385,11 +385,11 @@ class gameHandler {
 
                 for (let i = 0; i < amount; i++) {
                     let spot, attempts = 30, name = names[i];
-                    do { spot = getSpawnableArea(TEAM_ENEMIES, global.gameManager); } while (attempts-- && dirtyCheck(spot, 500));
+                    do { spot = getSpawnableArea(TEAM_NEUTRAL, global.gameManager); } while (attempts-- && dirtyCheck(spot, 500));
 
                     let boss = new Entity(spot);
                     boss.define(selection.bosses.sort(() => 0.5 - Math.random())[i % selection.bosses.length]);
-                    boss.team = TEAM_ENEMIES;
+                    boss.team = TEAM_NEUTRAL;
                     if (name) {
                         boss.name = name;
                     }
