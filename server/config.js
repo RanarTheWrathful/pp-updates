@@ -58,8 +58,8 @@ module.exports = {
     // Miscellaneous
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 420,
-    TILE_HEIGHT: 420,
+    TILE_WIDTH: 350,
+    TILE_HEIGHT: 350,
 
     // How long a chat message lasts in milliseconds.
     // Includes the fade-out period.
@@ -92,7 +92,7 @@ module.exports = {
     maxHeartbeatInterval: 300000,
 
     // Set halloween theme by adding the eye entities to the walls and replacing rocks to pumpkins
-    HALLOWEEN_THEME: true,
+    HALLOWEEN_THEME: false,
 
     // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
     bulletSpawnOffset: 1,
