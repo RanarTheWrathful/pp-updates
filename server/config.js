@@ -3,10 +3,9 @@ module.exports = {
 
     // Game server domain.
     // If the host is 'localhost:NUMBER', the NUMBER must be the port setting.
-    host: "localhost:3000",
+    host: "https://pp-updates.onrender.com/#loc",
     // Which port to run the web server on.
     port: 3000,
-
     // Server
 
     // How often to update the list of the entities that players can see.
@@ -29,7 +28,7 @@ module.exports = {
             LOAD_ON_MAINSERVER: true,
             // This is very important where the host is actually being hosted. Keep in mind that the ports gets changed to 3000, to 3001, and it repeats with the other servers.
             // Keep in mind that if "LOAD_ON_MAINSERVER" is set to true then this code will be replaced with the main server's host instead.
-            HOST: "https://pp-updates.onrender.com/#loc",
+            HOST: "localhost:3001",
             // The port where to host from.
             // Keep in mind that if "LOAD_ON_MAINSERVER" is set to true then this code will be replaced with the main server's port instead.
             PORT: 3001,
