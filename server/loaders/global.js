@@ -48,10 +48,10 @@ global.getSpawnableArea = (team, gameManager) => {
 
 }
 global.getTeamName = team => ["The Guardians", "The Fallen", "The Highlords", "The Voidlords", "The Renewed", "The Crusaders", "The Aether", "The Abyss", "Dreadnoughts", "Yellow", "Orange", "Brown", "Cyan", "Blue", "Green", "Red", "Purple"]
-global.teamColors = ['#96d4f3', '#bebebe', '#bbb196', 19, "#B865B4", "F2E8B8", "#F2E8B8", 19, 17, 25, 26, 27, 28, 10, 11, 12, 15];
+global.teamColors = ['#96d4f3', '#bebebe', '#bbb196', 19, "#B865B4", "F2E8B8", "#F2E8B8", 43, 17, 25, 26, 27, 28, 10, 11, 12, 15];
 global.getTeamName = team => ["The Guardians", "The Fallen", "The Highlords", "The Voidlords", "The Renewed", "The Crusaders", "The Aether", "The Abyss", "Dreadnoughts", "Yellow", "Orange", "Brown", "Cyan", "Blue", "Green", "Red", "Purple"][-team - 1] ?? "An unknown team";
 global.getTeamColor = (team, fixMode = false) => {
-    let color = (['#96d4f3', '#bebebe', '#bbb196', 19, "#B865B4", "F2E8B8", "#F2E8B8", 19, 17, 25, 26, 27, 28, 10, 11, 12, 15][-team - 1] ?? 3);
+    let color = (['#96d4f3', '#bebebe', '#bbb196', 19, "#B865B4", "F2E8B8", "#F2E8B8", 43, 17, 25, 26, 27, 28, 10, 11, 12, 15][-team - 1] ?? 3);
     if (fixMode) color = color + " 0 1 0 false";
     return color;
 }
