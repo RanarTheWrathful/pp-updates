@@ -970,7 +970,7 @@ Class.teams = menu("Teams")
 Class.teams.UPGRADES_TIER_0 = []
 for (let i = 1; i <= 17; i++) {
     let TEAM = i;
-	let teamName = getTeamName(TEAM);
+	let teamName = getTeamName(-TEAM);
     Class["Team" + teamName] = {
         PARENT: "teams",
         TEAM: -TEAM,
