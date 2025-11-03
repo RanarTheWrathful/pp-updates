@@ -968,35 +968,36 @@ for (let i = 0; i < 12; i++) {
 
 Class.teams = menu("Teams")
 Class.teams.UPGRADES_TIER_0 = []
-for (let i = 1; i <= 8; i++) {
+for (let i = 1; i <= 17; i++) {
     let TEAM = i;
-    Class["Team" + TEAM] = {
+	let teamName = getTeamName(TEAM);
+    Class["Team" + teamName] = {
         PARENT: "teams",
         TEAM: -TEAM,
         COLOR: getTeamColor(-TEAM),
-        LABEL: "Team " + TEAM
+        LABEL: "Team " + teamName
     };
-    Class.teams.UPGRADES_TIER_0.push("Team" + TEAM);
+    Class.teams.UPGRADES_TIER_0.push("Team" + teamName);
 }
-Class['Team' + TEAM_DREADNOUGHTS] = {
+/*Class['Team' + TEAM_DREADNOUGHTS] = {
     PARENT: "teams",
     TEAM: TEAM_DREADNOUGHTS,
     COLOR: getTeamColor(TEAM_DREADNOUGHTS),
     LABEL: "Dreads Team"
-};
+};*/
 Class['Team' + TEAM_ROOM] = {
     PARENT: "teams",
     TEAM: TEAM_ROOM,
     COLOR: "yellow",
     LABEL: "Room Team"
 };
-Class['Team' + TEAM_ENEMIES] = {
+Class['Team' + TEAM_NEUTRAL] = {
     PARENT: "teams",
-    TEAM: TEAM_ENEMIES,
+    TEAM: TEAM_NEUTRAL,
     COLOR: "yellow",
-    LABEL: "Enemies Team"
+    LABEL: "Neutral Team"
 };
-Class.teams.UPGRADES_TIER_0.push('Team' + TEAM_DREADNOUGHTS, 'Team' + TEAM_ROOM, 'Team' + TEAM_ENEMIES);
+Class.teams.UPGRADES_TIER_0.push(/*'Team' + TEAM_DREADNOUGHTS, */'Team' + TEAM_ROOM, 'Team' + TEAM_NEUTRAL);
 
 Class.testing = menu("Testing")
 
