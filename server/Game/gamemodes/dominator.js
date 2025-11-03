@@ -38,10 +38,10 @@ class Domination {
                 delete this.teamcounts[team];
             }
     
-            let newTeam = TEAM_ENEMIES,
+            let newTeam = TEAM_NEUTRAL,
                 newColor = getTeamColor(newTeam);
     
-            if (team === TEAM_ENEMIES) {
+            if (team === TEAM_NEUTRAL) {
                 let killers = [];
                 for (let instance of o.collisionArray) {
                     if (isPlayerTeam(instance.team) && team !== instance.team) {
@@ -63,7 +63,7 @@ class Domination {
     
                 let teamName = newTeam > 0 ? killer.name : getTeamName(newTeam);
                 global.gameManager.socketManager.broadcast(`A dominator is now controlled by ${teamName}!`);
-                if (newTeam !== TEAM_ENEMIES && this.teamcounts[newTeam] >= this.neededToWin && !this.gameWon) {
+                if (newTeam !== TEAM_NEUTRAL && this.teamcounts[newTeam] >= this.neededToWin && !this.gameWon) {
                     this.gameWon = true;
                     setTimeout(() => {
                         global.gameManager.socketManager.broadcast(teamName + " has won the game!");
@@ -85,7 +85,7 @@ class Domination {
     start() {
         this.gameActive = true;
         for (let tile of global.gameManager.room.spawnable["Dominators"]) {
-            this.spawnDominators(tile, TEAM_ENEMIES, tile.bluePrint.COLOR);
+            this.spawnDominators(tile, TEAM_NEUTRAL, tile.bluePrint.COLOR);
         }
     }
 
