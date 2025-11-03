@@ -12,7 +12,7 @@ module.exports = {
     visibleListInterval: 250,
 
     // Start up logs and Log speed loop warnings
-    LOGS: true,
+    LOGS: false,
 
     // If set to true, it loads all mockups and doesn't needs to generate while ingame. If set to false, does require need to generate mockups ingame but starts the main server instantly.
     LOAD_ALL_MOCKUPS: false,
