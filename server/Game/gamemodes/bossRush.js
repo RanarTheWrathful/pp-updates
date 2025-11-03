@@ -143,10 +143,10 @@ class bossRush {
         type = type ? type : "sanctuaryTier3";
         let o = new Entity(tile.loc);
         o.team = team;
-        this.defineSanctuary(o, type, o.team === TEAM_ENEMIES ? "DESTROYED" : false);
+        this.defineSanctuary(o, type, o.team === TEAM_NEUTRAL ? "DESTROYED" : false);
         if (addToSanctuaryList) this.sanctuaries.push(o);
         o.on('dead', () => {
-            if (o.team === TEAM_ENEMIES) {
+            if (o.team === TEAM_NEUTRAL) {
                 // Allow the player to spawn so we add it to the spawnable locations.
                 this.room.spawnable[TEAM_BLUE].push(tile);
                 this.spawnSanctuary(tile, TEAM_BLUE, `sanctuaryTier${this.sanctuaryTier}`);
@@ -158,7 +158,7 @@ class bossRush {
                 // Don't allow players to spawn at the destroyed sanctuary so we remove it from spawnable location.
                 if (this.gameActive) util.remove(this.room.spawnable[TEAM_BLUE], this.room.spawnable[TEAM_BLUE].indexOf(tile));
                 util.remove(this.sanctuaries, this.sanctuaries.indexOf(o));
-                let newTeam = TEAM_ENEMIES;
+                let newTeam = TEAM_NEUTRAL;
                 this.spawnSanctuary(tile, newTeam, "dominator", false);
                 tile.color = "yellow";
                 this.leftSanctuaries--;
@@ -225,7 +225,7 @@ class bossRush {
     spawnEnemyWrapper(loc, type) {
         let enemy = new Entity(loc);
         enemy.define(type);
-        enemy.team = TEAM_ENEMIES;
+        enemy.team = TEAM_NEUTRAL;
         enemy.FOV = 30;
         enemy.refreshSkills();
         enemy.refreshBodyAttributes();
