@@ -490,7 +490,7 @@ class gameServer {
                     CAN_GO_OUTSIDE_ROOM: true,
                 });
                 // Set it's team, name and minimap color
-                o.team = TEAM_ENEMIES;
+                o.team = TEAM_NEUTRAL;
                 o.name = "Arena Closer";
                 o.minimapColor = "yellow";
                 o.alwaysActive = true;
@@ -508,7 +508,7 @@ class gameServer {
                 if (
                     (instance.isPlayer && !instance.invuln) || instance.isMothership ||
                     instance.isBot ||
-                    (instance.isDominator && instance.team !== TEAM_ENEMIES)
+                    (instance.isDominator && instance.team !== TEAM_NEUTRAL)
                 ) {
                     alive = true;
                 }
