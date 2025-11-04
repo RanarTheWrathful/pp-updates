@@ -440,7 +440,7 @@ class gameHandler {
         let color = Config.RANDOM_COLORS ? Math.floor(Math.random() * 20) : team ? getTeamColor(team) : 12;
         o.color.base = color;
         /*if (Config.TEAMS)*/ o.leaderboardColor = 11;
-           // else o.leaderboardColor = color;
+             o.leaderboardColor = color;
         o.minimapColor = color;
         o.skill.reset();
         let leveling = setInterval(() => {
