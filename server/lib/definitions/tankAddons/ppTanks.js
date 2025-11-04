@@ -9,10 +9,6 @@ const { menu, combineStats, addAura, makeAuto, weaponArray, dereference } = requ
 const { smshskl, base } = require('../constants.js');
 const g = require('../gunvals.js');
 
-// This addon is disabled by default.
-// You can also disable addons by not making them end with '.js'
-// If you want to enable, simply make the line below just not run.
-return;
 
 let MAX_CHILDREN = 0,
 	GUNS = [],
