@@ -9,5 +9,5 @@ const g = require('../gunvals.js');
 
 
 Class.ppTanks = menu("Prophecy Paradox Tanks");
-Class.pptanks.UPGRADES_TIER_0 = [];
+Class.ppTanks.UPGRADES_TIER_0 = [];
 Class.addons.UPGRADES_TIER_0.push("ppTanks");
