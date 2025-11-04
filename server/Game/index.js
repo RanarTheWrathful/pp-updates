@@ -439,7 +439,7 @@ class gameHandler {
         o.leftoverUpgrades = ran.chooseChance(...Config.BOT_CLASS_UPGRADE_CHANCES);
         let color = Config.RANDOM_COLORS ? Math.floor(Math.random() * 20) : team ? getTeamColor(team) : 12;
         o.color.base = color;
-        if (Config.TEAMS !== undefined) o.leaderboardColor = 11;
+        if (Config.TEAMS) o.leaderboardColor = 11;
             else o.leaderboardColor = color;
         o.minimapColor = color;
         o.skill.reset();
