@@ -5,6 +5,9 @@
 
 const { base } = require('../constants.js');
 const {menu} = require("../facilitators");
+const { menu, combineStats, addAura, makeAuto, weaponArray, dereference } = require('../facilitators.js');
+const { smshskl, base } = require('../constants.js');
+const g = require('../gunvals.js');
 
 // This addon is disabled by default.
 // You can also disable addons by not making them end with '.js'
