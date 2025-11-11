@@ -11,7 +11,7 @@ module.exports = {
 
     // Game server domain.
     // If the host is 'localhost:NUMBER', the NUMBER must be the port setting.
-     host: "localhost:3000",
+     //host: "localhost:3000",
 
     // Which port to run the web server on.
     port: 3000,
@@ -35,7 +35,7 @@ module.exports = {
             // This is important and usefull,
             // if your VM (Your machine that hosts the website stuff) doesn't support multi ports,
             // you are forced to set this to true because it will load via through the main server.
-            LOAD_ON_MAINSERVER: false,
+           // LOAD_ON_MAINSERVER: false,
             // This is very important where the host is actually being hosted. Keep in mind that the ports gets changed to 3000, to 3001, and it repeats with the other servers.
             // Keep in mind that if "LOAD_ON_MAINSERVER" is set to true then this code will be replaced with the main server's host instead.
             HOST: "localhost:3001",
