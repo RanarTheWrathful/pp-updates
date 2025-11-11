@@ -1,3 +1,11 @@
+let serverMode = "render";
+if (serverMode === "render) {
+    config.LOAD_ON_MAINSERVER = true;
+//config.host = "localhost:3000";
+    } else if (serverMode === "local") {
+    config.LOAD_ON_MAINSERVER = false;
+        config.host = "localhost:3000";
+}
 module.exports = {
     // Server host
 
