@@ -1,5 +1,5 @@
 let serverMode = "render";
-if (serverMode === "render) {
+if (serverMode === "render") {
     config.LOAD_ON_MAINSERVER = true;
 config.host = "pp-updates.onrender.com";
     } else if (serverMode === "local") {
