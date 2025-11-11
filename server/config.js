@@ -1,14 +1,20 @@
 
 let serverMode = "render",
 LOAD_ON_MAINSERVER,
+  HALLOWEEN_THEME,
+  LOGS,
 host;
 
 if (serverMode === "render") {
   LOAD_ON_MAINSERVER = true;
   host = "pp-updates.onrender.com";
+  HALLOWEEN_THEME = false;
+  LOGS = false;
 } else {
   LOAD_ON_MAINSERVER = false;
   host = "localhost:3000";
+  HALLOWEEN_THEME = true;
+  LOGS = true;
 }
 
 module.exports = {
@@ -23,7 +29,7 @@ module.exports = {
     visibleListInterval: 250,
 
     // Start up logs and Log speed loop warnings
-    LOGS: true,
+    LOGS,
 
     // If set to true, it loads all mockups and doesn't needs to generate while ingame. If set to false, does require need to generate mockups ingame but starts the main server instantly.
     LOAD_ALL_MOCKUPS: false,
@@ -103,7 +109,7 @@ module.exports = {
     maxHeartbeatInterval: 300000,
 
     // Set halloween theme by adding the eye entities to the walls and replacing rocks to pumpkins
-    HALLOWEEN_THEME: true,
+    HALLOWEEN_THEME,
 
     // Where the bullet spawns, where 1 is fully outside the barrel and -1 is fully inside the barrel, and 0 is halfway between.
     bulletSpawnOffset: 1,
