@@ -1,10 +1,10 @@
 let serverMode = "render";
 if (serverMode === "render") {
-    config.LOAD_ON_MAINSERVER = true;
-config.host = "pp-updates.onrender.com";
+    LOAD_ON_MAINSERVER = true;
+host = "pp-updates.onrender.com";
     } else if (serverMode === "local") {
-    config.LOAD_ON_MAINSERVER = false;
-        config.host = "localhost:3000";
+    LOAD_ON_MAINSERVER = false;
+     host = "localhost:3000";
 }
 module.exports = {
     // Server host
