@@ -1,5 +1,5 @@
 
-let serverMode = "render",
+let serverMode = "local",
 LOAD_ON_MAINSERVER,
   HALLOWEEN_THEME,
   LOGS,
@@ -10,7 +10,7 @@ if (serverMode === "render") {
   host = "pp-updates.onrender.com";
   HALLOWEEN_THEME = false;
   LOGS = false;
-} else {
+} else if (serverMode === "local") {
   LOAD_ON_MAINSERVER = false;
   host = "localhost:3000";
   HALLOWEEN_THEME = true;
