@@ -3,7 +3,7 @@ let serverMode = "local",
 LOAD_ON_MAINSERVER,
   HALLOWEEN_THEME,
   LOGS,
-host;
+  host;
 
 if (serverMode === "render") {
   LOAD_ON_MAINSERVER = true;
