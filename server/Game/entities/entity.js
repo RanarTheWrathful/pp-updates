@@ -1187,7 +1187,7 @@ class Entity extends EventEmitter {
 
             for (let i = 0; i < this.collisionArray.length; i++) {
                 let instance = this.collisionArray[i];
-                if (instance.type === 'wall' || !instance.damage || instance.invuln) continue;
+                if (instance.type === 'wall' || !instance.damage) continue;
                 damageInflictor.push(instance.master)
                 damageTool.push(instance)
             }
@@ -1202,6 +1202,7 @@ class Entity extends EventEmitter {
         // Shield regen and damage
         if (this.shield.max) {
             if (this.damageReceived) {
+                if (instance.invuln) return;
                 let shieldDamage = this.shield.getDamage(this.damageReceived);
                 this.damageReceived -= shieldDamage;
                 this.shield.amount -= shieldDamage;
@@ -1209,6 +1210,7 @@ class Entity extends EventEmitter {
         }
         // Health damage
         if (this.damageReceived) {
+                if (instance.invuln) return;
             let healthDamage = this.health.getDamage(this.damageReceived);
             this.blend.amount = 1;
             this.health.amount -= healthDamage;
