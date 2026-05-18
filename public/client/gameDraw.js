@@ -170,6 +170,7 @@ var gameDraw = {
         gay: "",
         bi: "",
         trans: "",
+        abyss: "",
         magenta: "",
         blue_red: "",
         blue_grey: "",
