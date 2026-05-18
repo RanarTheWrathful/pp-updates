@@ -811,7 +811,7 @@ exports.makeRare = (type, level) => {
         LABEL: ["Shiny", "Legendary", "Shadow", "Rainbow", "Abyssal"][level] + " " + type.LABEL,
         VALUE: [100, 500, 2000, 5000, 10000][level] * type.VALUE,
         SHAPE: type.SHAPE,
-        SIZE: type.SIZE,
+        SIZE: [1.5, 2, 2.5, 5, 15][level] * type.SIZE,
         GLOW:  {
             RADIUS: 2,
             STRENGTH: 25,
