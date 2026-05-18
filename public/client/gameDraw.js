@@ -202,7 +202,7 @@ var gameDraw = {
         
             abyssRain1 = "#ffffff",
             abyssRain2 = "#666666",
-            abyssRain3 = "#000000",
+            abyssRain3 = "#363636",
         t = now / 1000,
 
 // slow “presence” drift (feels like something watching)
