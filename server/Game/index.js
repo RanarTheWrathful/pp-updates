@@ -353,7 +353,7 @@ class gameHandler {
     }
 
     regenHealthAndShield() {
-        for (let instance of entities.values()) {
+        for (let instance of entities.values() && instance.REGEN > 0) {
             if (instance.shield.max) {
                 instance.shield.regenerate();
             }
@@ -474,6 +474,7 @@ class gameHandler {
             o.name = botName;
             o.refreshBodyAttributes();
             o.invuln = false;
+            o.skill.score = Math.random() * 250000;
             o.on("define", () => {
                 let CC = Class[o.defs[0]];
                 if (CC && CC.HEALING_TANK) {
