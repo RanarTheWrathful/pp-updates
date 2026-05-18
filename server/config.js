@@ -188,13 +188,25 @@ module.exports = {
     // The possible food types that can spawn.
     FOOD_TYPES: [
         [2000, [
-            [65, 'egg'], [64, 'triangle'], [45, 'square'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
+            [65, 'egg'], [50, 'triangle'], [45, 'square'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
+        ]],
+        [2000, [
+            [625, 'shinyEgg'], [125, 'shinyTriangle'], [25, 'shinySquare'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
+        ]],
+        [2000, [
+            [1296, 'legendaryEgg'], [216, 'legendaryTriangle'], [36, 'legendarySquare'], [6, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
+        ]],
+        [2000, [
+            [65, 'shadowEgg'], [64, 'shadowTriangle'], [45, 'shadowSquare'], [7, 'shadowPentagon'], [1, 'shadowHexagonOfficialV1']
+        ]],
+        [2000, [
+            [625, 'rainbowEgg'], [125, 'rainbowTriangle'], [25, 'rainbowSquare'], [5, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
+        ]],
+        [2000, [
+            [62, 'abyssalEgg'], [12, 'abyssalTriangle'], [2, 'abyssalSquare'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
         ]],
         [1, [
-            [625, 'gem'], [125, 'shinyTriangle'], [25, 'shinySquare'], [5, 'shinyPentagon'], [1, 'shinyHexagon']
-        ]],
-        [0.1, [
-            [1296, 'jewel'], [216, 'legendaryTriangle'], [36, 'legendarySquare'], [6, 'legendaryPentagon'], [1, 'legendaryHexagon']
+            [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'icosehedron'], [ 1, 'abyssalNonagonOfficialV1']
         ]]
     ],
 
@@ -202,7 +214,25 @@ module.exports = {
     FOOD_TYPES_NEST: [
         [1, [
             [40, 'pentagon'], [ 10, 'hexagonOfficialV1'], [ 5, 'heptagonOfficialV1'], [ 2, 'octagonOfficialV1'], [ 1, 'nonagonOfficialV1']
-        ]]
+        ]],
+        [1, [
+            [40, 'shinyPentagon'], [ 10, 'shinyHexagonOfficialV1'], [ 5, 'shinyHeptagonOfficialV1'], [ 2, 'shinyOctagonOfficialV1'], [ 1, 'shinyNonagonOfficialV1']
+        ]],
+        [1, [
+            [40, 'legendaryPentagon'], [ 10, 'legendaryHexagonOfficialV1'], [ 5, 'legendaryHeptagonOfficialV1'], [ 2, 'legendaryOctagonOfficialV1'], [ 1, 'legendaryNonagonOfficialV1']
+        ]],
+        [1, [
+            [40, 'shadowPentagon'], [ 10, 'shadowHexagonOfficialV1'], [ 5, 'shadowHeptagonOfficialV1'], [ 2, 'shadowOctagonOfficialV1'], [ 1, 'shadowNonagonOfficialV1']
+        ]],
+        [1, [
+            [40, 'rainbowPentagon'], [ 10, 'rainbowHexagonOfficialV1'], [ 5, 'rainbowHeptagonOfficialV1'], [ 2, 'rainbowOctagonOfficialV1'], [ 1, 'rainbowNonagonOfficialV1']
+        ]],
+        [1, [
+            [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
+        ]],
+        [1, [
+            [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
+        ]],
     ],
 
     // The possible nest enemy types that can spawn.
