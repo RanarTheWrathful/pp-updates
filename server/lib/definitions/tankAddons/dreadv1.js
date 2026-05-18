@@ -78,6 +78,7 @@ Class.hexagonOfficialV1 = {
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
+makeRarities("hexagonOfficialV1");
 Class.heptagonOfficialV1 = {
 	PARENT: 'food',
 	COLOR: 'green',
@@ -97,6 +98,7 @@ Class.heptagonOfficialV1 = {
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
+makeRarities("heptagonOfficialV1");
 Class.octagonOfficialV1 = {
 	PARENT: 'food',
 	COLOR: 'hexagon',
@@ -116,6 +118,7 @@ Class.octagonOfficialV1 = {
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
+makeRarities("octagonOfficialV1");
 Class.nonagonOfficialV1 = {
 	PARENT: 'food',
 	COLOR: 'white',
@@ -135,6 +138,7 @@ Class.nonagonOfficialV1 = {
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
+makeRarities("nonagonOfficialV1");
 
 // Map elements
 function portalRings(color = '#1c3766') {
