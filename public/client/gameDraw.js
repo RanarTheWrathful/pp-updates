@@ -203,8 +203,19 @@ var gameDraw = {
             abyssRain1 = "#363636",
             abyssRain2 = "#666666",
             abyssRain3 = "#000000",
-        
-        pulse = (Math.sin(now / 1000) + 1) / 2;
+        t = now / 1000,
+
+// slow “presence” drift (feels like something watching)
+slow = 0.5 + 0.5 * Math.sin(t * 0.6),
+
+// breathing layer (main pulse)
+breath = 0.5 + 0.5 * Math.sin(t * 1.8),
+
+// micro instability (jitters the feeling)
+glitch = (Math.sin(t * 17.3) * Math.sin(t * 3.7)) * 0.08,
+
+// combine
+pulse = slow * 0.55 + breath * 0.35 + glitch;
         
         gameDraw.animatedColor.lesbian = gameDraw.getRainbow(lesbian_useSecondSet ? lesbian_oredange : lesbian_white, lesbian_useSecondSet ? lesbian_white : lesbian_magenta, (lesbian_useSecondSet ? five_bars : five_bars - 3) / 2);
         gameDraw.animatedColor.gay = gameDraw.hslToRgb(gay_transition, 0.75, 0.5);
