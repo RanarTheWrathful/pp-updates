@@ -757,7 +757,7 @@ class io_minion extends IO {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE)
             let leash = 50 * sizeFactor
             let orbit = this.opts.turnwiserange ?? 150 * sizeFactor
-            let repel = (71 * sizeFactor)/2
+            let repel = (71 * sizeFactor)/10
             let goal
             let power = 1
             let target = new Vector(input.target.x, input.target.y)
@@ -770,7 +770,7 @@ class io_minion extends IO {
                     }
                     // Spiral repel
                 } else if (target.length < repel) {
-                    let dir = (-this.turnwise * target.direction + Math.PI / 5)/2
+                    let dir = -this.turnwise * target.direction + Math.PI / 5
                     goal = {
                         x: this.body.x + Math.cos(dir),
                         y: this.body.y + Math.sin(dir),
