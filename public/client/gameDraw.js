@@ -210,8 +210,11 @@ var gameDraw = {
         gameDraw.animatedColor.gay = gameDraw.hslToRgb(gay_transition, 0.75, 0.5);
         gameDraw.animatedColor.trans = gameDraw.mixColors(trans_white, 2000 > now % 4000 ? trans_blue : trans_pink, Math.max(Math.min(5 * Math.sin(now % 2000 / 2000 * Math.PI) - 2, 1), 0)); // Animated!
         
-gameDraw.animatedColor.abyss = gameDraw.mixColors(abyssRain3, 2000 > now % 4000 ? abyssRain2 : abyssRain1, Math.max(Math.min(5 * Math.sin(now % 2000 / 2000 * Math.PI) - 2, 1), 0)); // Animated!
-    
+gameDraw.animatedColor.abyss = gameDraw.mixColors(
+    abyssRain3,
+    2000 > now % 4000 ? abyssRain2 : abyssRain1,
+    pulse
+);
         gameDraw.animatedColor.magenta = gameDraw.hslToRgb(
             light_purple.h + (purple.h - light_purple.h) * ratio,
             light_purple.s + (purple.s - light_purple.s) * ratio,
