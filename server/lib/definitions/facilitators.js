@@ -809,7 +809,7 @@ exports.makeRare = (type, level) => {
     return {
         PARENT: "food",
         LABEL: ["Shiny", "Legendary", "Shadow", "Rainbow", "Abyssal"][level] + " " + type.LABEL,
-        VALUE: [100, 500, 2000, 4000, 5000][level] * type.VALUE,
+        VALUE: [100, 500, 2000, 5000, 10000][level] * type.VALUE,
         SHAPE: type.SHAPE,
         SIZE: type.SIZE,
         GLOW:  {
