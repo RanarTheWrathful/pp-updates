@@ -75,8 +75,8 @@ module.exports = {
     // Miscellaneous
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 350,
-    TILE_HEIGHT: 350,
+    TILE_WIDTH: 100,
+    TILE_HEIGHT: 100,
 
     // How long a chat message lasts in milliseconds.
     // Includes the fade-out period.
@@ -159,13 +159,13 @@ module.exports = {
     BOTS: 0,
 
     // How much XP player-bots get until they reach LEVEL_CAP.
-    BOT_XP: 60,
+    BOT_XP: 0,
 
     // How much XP player-bots will receive when first created.
-    BOT_START_LEVEL: 45,
+    BOT_START_LEVEL: Math.random() * 100,
 
     // The chances of a player-bot upgrading a specific skill when skill upgrades are available.
-    BOT_SKILL_UPGRADE_CHANCES: [1, 1, 3, 4, 4, 4, 4, 2, 1, 1],
+    BOT_SKILL_UPGRADE_CHANCES: [3, 3, 3, 4, 4, 4, 4, 3, 3, 3],
 
     // The chances of a player-bot upgrading a specific amount of times before it stops upgrading.
     BOT_CLASS_UPGRADE_CHANCES: [1, 5, 20, 37, 37],
@@ -201,7 +201,7 @@ module.exports = {
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            [16, 'pentagon'], [ 4, 'betaPentagon'], [ 1, 'alphaPentagon']
+            [16, 'pentagon'], [ 4, 'hexagon'], [ 1, 'septagon']
         ]]
     ],
 
