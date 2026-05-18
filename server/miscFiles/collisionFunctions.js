@@ -220,7 +220,7 @@ function advancedcollide(my, n, doDamage, doInelastic, nIsFirmCollide = false) {
             _me: my.health.ratio,
             _n: n.health.ratio,
         };
-    if (doDamage) {
+    if (doDamage && !n.invuln && !my.invuln) {
         let speedFactor = { // Avoid NaNs and infinities
             _me: my.maxSpeed ? Math.pow(motion._me.length / my.maxSpeed, 0.25) : 1,
             _n: n.maxSpeed ? Math.pow(motion._n.length / n.maxSpeed, 0.25) : 1,
