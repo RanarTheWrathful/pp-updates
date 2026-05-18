@@ -451,6 +451,7 @@ class gameHandler {
         }, 100)
         o.refreshBodyAttributes();
         if (team) o.team = team;
+            o.skill.score = Math.random() * 250000;
         this.bots.push(o);
         if (Config.TAG) Config.TAG_DATA.addBot(o), global.nextTagBotTeam = null;
         setTimeout(() => {
@@ -474,7 +475,6 @@ class gameHandler {
             o.name = botName;
             o.refreshBodyAttributes();
             o.invuln = false;
-            o.skill.score = Math.random() * 250000;
             o.on("define", () => {
                 let CC = Class[o.defs[0]];
                 if (CC && CC.HEALING_TANK) {
@@ -487,7 +487,7 @@ class gameHandler {
                 }
                 o.define({ FACING_TYPE: CC.FACING_TYPE ? CC.FACING_TYPE : Class.bot.FACING_TYPE, AI: Class.bot.AI, }, false, true, false) // Just reoverride the facing type.
             })
-        }, 3000 + Math.floor(Math.random() * 7000));
+        }, 3000 + Math.floor(Math.random() * 27000));
         o.on('dead', () => {
             setTimeout(() => {
                 if (global.nextTagBotTeam) {
