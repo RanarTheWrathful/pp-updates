@@ -898,7 +898,7 @@ class io_spin2 extends IO {
 class io_fleeAtLowHealth extends IO {
     constructor(b) {
         super(b)
-        this.fear = util.clamp(ran.gauss(0.7, 0.15), 0.1, 0.9);
+        this.fear = util.clamp(ran.gauss(0.35, 0.25), 0.1, 0.9);
         b.fear = this.fear;
     }
     think(input) {
