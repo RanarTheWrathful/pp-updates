@@ -192,7 +192,7 @@ makeRarities("hexagon");
 // 3D POLYGONS
 Class.sphere = {
     PARENT: "food",
-    LABEL: "The Sphere",
+    LABEL: "Sphere",
     FACING_TYPE: "noFacing",
     VALUE: 1e7,
     SHAPE: 0,
@@ -233,7 +233,7 @@ Class.sphere = {
 };
 Class.cube = {
     PARENT: "food",
-    LABEL: "The Cube",
+    LABEL: "Cube",
     VALUE: 2e7,
     SIZE: 10,
     COLOR: "egg",
@@ -252,7 +252,7 @@ Class.cube = {
 };
 Class.tetrahedron = {
     PARENT: "food",
-    LABEL: "The Tetrahedron",
+    LABEL: "Tetrahedron",
     VALUE: 3e7,
     SIZE: 12,
     COLOR: "egg",
@@ -270,7 +270,7 @@ Class.tetrahedron = {
 };
 Class.octahedron = {
     PARENT: "food",
-    LABEL: "The Octahedron",
+    LABEL: "Octahedron",
     VALUE: 4e7,
     SIZE: 13,
     COLOR: "egg",
@@ -288,7 +288,7 @@ Class.octahedron = {
 };
 Class.dodecahedron = {
     PARENT: "food",
-    LABEL: "The Dodecahedron",
+    LABEL: "Dodecahedron",
     VALUE: 5e7,
     SIZE: 18,
     COLOR: "egg",
@@ -306,7 +306,7 @@ Class.dodecahedron = {
 };
 Class.icosahedron = {
     PARENT: "food",
-    LABEL: "The Icosahedron",
+    LABEL: "Icosahedron",
     VALUE: 1e8,
     SIZE: 20,
     COLOR: "egg",
