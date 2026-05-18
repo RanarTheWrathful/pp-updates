@@ -681,7 +681,7 @@ class io_healTeamMasters extends IO {
             }
         }
         if (this.targetLock != null) {
-            let radial = this.targetLock.velocity,
+            let radial = this.targetLock.velocity/2,
                 diff = {
                     x: this.targetLock.x - this.body.x,
                     y: this.targetLock.y - this.body.y,
@@ -784,7 +784,7 @@ class io_minion extends IO {
                 }
             } else if (input.main) {
                 // Orbit point
-                let dir = (this.turnwise * target.direction + 0.01)/2
+                let dir = this.turnwise * target.direction + 0.01
                 goal = {
                     x: this.body.x + target.x - orbit * Math.cos(dir),
                     y: this.body.y + target.y - orbit * Math.sin(dir),
