@@ -1098,7 +1098,7 @@ Class.rcs = {
 Class.bot = {
     FACING_TYPE: "looseToTarget",
     CONTROLLERS: ["nearestDifferentMaster", "mapAltToFire", "minion", "fleeAtLowHealth", ["mapFireToAlt", { onlyIfHasAltFireGun: true }], ["wanderAroundMap", { immitatePlayerMovement: true, lookAtGoal: true }]],
-    AI: { IGNORE_SHAPES: true },
+    AI: { IGNORE_SHAPES: false },
 };
 
 // SCORE KEEPING
