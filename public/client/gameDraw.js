@@ -200,8 +200,8 @@ var gameDraw = {
             trans_blue = "#55cdfc",
             trans_white = "#ffffff",
         
-            abyssRain1 = "#000000",
-            abyssRain2 = "#666666",
+            abyssRain1 = "#666666",
+            abyssRain2 = "#000000",
             abyssRain3 = "#363636",
         t = now / 1000,
 
