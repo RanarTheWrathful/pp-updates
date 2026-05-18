@@ -537,7 +537,7 @@ class io_nearestDifferentMaster extends IO {
             }
         }
         if (this.targetLock != null) {
-            let radial = this.targetLock.velocity/2,
+            let radial = this.targetLock.velocity,
                 diff = {
                     x: this.targetLock.x - this.body.x,
                     y: this.targetLock.y - this.body.y,
