@@ -507,10 +507,10 @@ class io_nearestDifferentMaster extends IO {
             }
         }
         if (!Number.isFinite(tracking)) {
-            tracking = this.body.topSpeed + .01;
+            tracking = this.body.topSpeed// + .01;
         }
         if (!Number.isFinite(range)) {
-            range = 640 * this.body.FOV;
+            range = this.body.FOV// * 640;
         }
         // Lets see if the entity still lives
         if (this.targetLock && (
