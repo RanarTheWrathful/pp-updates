@@ -808,17 +808,17 @@ exports.makeRare = (type, level) => {
     type = ensureIsClass(type);
     return {
         PARENT: "food",
-        LABEL: ["Shiny", "Legendary", "Shadow", "Rainbow", "Trans"][level] + " " + type.LABEL,
+        LABEL: ["Shiny", "Legendary", "Shadow", "Rainbow", "Abyssal"][level] + " " + type.LABEL,
         VALUE: [100, 500, 2000, 4000, 5000][level] * type.VALUE,
         SHAPE: type.SHAPE,
         SIZE: type.SIZE,
         GLOW:  {
             RADIUS: 2,
             STRENGTH: 25,
-            COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "trans"][level],
+            COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "black"][level],
             ALPHA: 0.6
         },
-        COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "trans"][level],
+        COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "black"][level],
         ALPHA: level == 2 ? 0.25 : 1,
         BODY: {
             DAMAGE: [1, 1, 2, 2.5, 2.5][level] * type.BODY.DAMAGE,
@@ -912,7 +912,7 @@ exports.makeLaby = (type, tier, rarity, level, baseScale = 1) => {
 };
 exports.makeRarities = (type) => {
     const ct = type.charAt(0).toUpperCase() + type.slice(1);
-    const rarities = ["shiny", "legendary", "shadow", "rainbow", "trans"];
+    const rarities = ["shiny", "legendary", "shadow", "rainbow", "abyssal"];
     for (let i = 0; i < rarities.length; i++) {
         const pn = `${rarities[i]}${ct}`;
         Class[pn] = exports.makeRare(`${type}`, [i]);
