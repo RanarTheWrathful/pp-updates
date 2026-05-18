@@ -156,13 +156,13 @@ module.exports = {
     INDEX_HTML: "index.html",
 
     // How many bots can be spawned.
-    BOTS: 0,
+    BOTS: 5,
 
     // How much XP player-bots get until they reach LEVEL_CAP.
     BOT_XP: 0,
 
     // How much XP player-bots will receive when first created.
-    BOT_START_LEVEL: Math.random() * 100,
+    BOT_START_LEVEL: 1,
 
     // The chances of a player-bot upgrading a specific skill when skill upgrades are available.
     BOT_SKILL_UPGRADE_CHANCES: [3, 3, 3, 4, 4, 4, 4, 3, 3, 3],
