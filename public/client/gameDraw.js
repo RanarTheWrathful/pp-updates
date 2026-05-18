@@ -206,7 +206,7 @@ var gameDraw = {
         gameDraw.animatedColor.lesbian = gameDraw.getRainbow(lesbian_useSecondSet ? lesbian_oredange : lesbian_white, lesbian_useSecondSet ? lesbian_white : lesbian_magenta, (lesbian_useSecondSet ? five_bars : five_bars - 3) / 2);
         gameDraw.animatedColor.gay = gameDraw.hslToRgb(gay_transition, 0.75, 0.5);
         gameDraw.animatedColor.trans = gameDraw.mixColors(trans_white, 2000 > now % 4000 ? trans_blue : trans_pink, Math.max(Math.min(5 * Math.sin(now % 2000 / 2000 * Math.PI) - 2, 1), 0)); // Animated!
-        gameDraw.animatedColor.gray = gameDraw.mixColors(abyssRain3, 2000 > now % 4000 ? abyssRain2 : abyssRain1, Math.max(Math.min(5 * Math.sin(now % 2000 / 2000 * Math.PI) - 2, 1), 0)); // Animated!
+        gameDraw.animatedColor.abyss = gameDraw.mixColors(abyssRain3, 2000 > now % 4000 ? abyssRain2 : abyssRain1, Math.max(Math.min(5 * Math.sin(now % 2000 / 2000 * Math.PI) - 2, 1), 0)); // Animated!
         gameDraw.animatedColor.magenta = gameDraw.hslToRgb(
             light_purple.h + (purple.h - light_purple.h) * ratio,
             light_purple.s + (purple.s - light_purple.s) * ratio,
@@ -247,7 +247,6 @@ var gameDraw = {
         // rainbow
         36: true,
         rainbow: true,
-        gray: true,
         // trans
         37: true,
         trans: true,
@@ -259,6 +258,10 @@ var gameDraw = {
         // magenta
         42: true,
         animatedMagenta: true,
+
+        //Abyssal Rainbow
+        43: true,
+        abyss: true,
     },
     getColor: (colorNumber) => {
         if (colorNumber == undefined || colorNumber == null) return gameDraw.color.black;
@@ -465,10 +468,9 @@ var gameDraw = {
             case "animatedMagenta":
                 return gameDraw.animatedColor.magenta;
             case 43:
-            case "animatedGray":
-            case "animatedGrey":
+            case "abyss":
             case "abyssalRainbow":
-                return gameDraw.animatedColor.gray;
+                return gameDraw.animatedColor.abyss;
 
             // Client / other
             case "nest":
