@@ -188,7 +188,7 @@ module.exports = {
     // The possible food types that can spawn.
     FOOD_TYPES: [
         [2000, [
-            [65, 'egg'], [64, 'triangle'], [45, 'square'], [7, 'pentagon'], [1, 'hexagon']
+            [65, 'egg'], [64, 'triangle'], [45, 'square'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
         ]],
         [1, [
             [625, 'gem'], [125, 'shinyTriangle'], [25, 'shinySquare'], [5, 'shinyPentagon'], [1, 'shinyHexagon']
@@ -201,7 +201,7 @@ module.exports = {
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
         [1, [
-            [16, 'pentagon'], [ 4, 'hexagon'], [ 1, 'septagon']
+            [40, 'pentagon'], [ 10, 'hexagonOfficialV1'], [ 5, 'heptagonOfficialV1'], [ 2, 'octagonOfficialV1'], [ 1, 'nonagonOfficialV1']
         ]]
     ],
 
