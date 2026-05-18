@@ -190,48 +190,45 @@ module.exports = {
         [100000, [
             [100, 'egg'], [75, 'square'], [50, 'triangle'], [10, 'pentagon'], [1, 'hexagonOfficialV1']
         ]],
-        [10000, [
+        [1000, [
             [100, 'shinyEgg'], [75, 'shinySquare'], [50, 'shinyTriangle'], [10, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
         ]],
-        [1000, [
+        [100, [
             [100, 'legendaryEgg'], [75, 'legendarySquare'], [50, 'legendaryTriangle'], [10, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
         ]],
-        [500, [
+        [50, [
             [100, 'shadowEgg'], [75, 'shadowSquare'], [50, 'shadowTriangle'], [10, 'shadowPentagon'], [1, 'shadowHexagonOfficialV1']
         ]],
-        [100, [
+        [10, [
             [100, 'rainbowEgg'], [75, 'rainbowSquare'], [50, 'rainbowTriangle'], [10, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
         ]],
-        [10, [
+        [1, [
             [100, 'abyssalEgg'], [75, 'abyssalSquare'], [50, 'abyssalTriangle'], [10, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
         ]],
-        [10, [
+        [1, [
             [100, 'sphere'], [75, 'cube'], [50, 'tetrahedron'], [10, 'octahedron'], [ 1, 'dodecahedron']
         ]]
     ],
 
     // The possible nest food types that can spawn.
     FOOD_TYPES_NEST: [
-        [1, [
-            [40, 'pentagon'], [ 10, 'hexagonOfficialV1'], [ 5, 'heptagonOfficialV1'], [ 2, 'octagonOfficialV1'], [ 1, 'nonagonOfficialV1']
+        [100000, [
+            [100, 'pentagon'], [30, 'hexagonOfficialV1'], [10, 'heptagonOfficialV1'], [5, 'octagonOfficialV1'], [1, 'nonagonOfficialV1']
+        ]],
+        [1000, [
+            [100, 'shinyPentagon'], [30, 'shinyHexagonOfficialV1'], [10, 'shinyHeptagonOfficialV1'], [5, 'shinyOctagonOfficialV1'], [1, 'shinyNonagonOfficialV1']
+        ]],
+        [100, [
+            [100, 'legendaryPentagon'], [30, 'legendaryHexagonOfficialV1'], [10, 'legendaryHeptagonOfficialV1'], [5, 'legendaryOctagonOfficialV1'], [1, 'legendaryNonagonOfficialV1']
+        ]],
+        [50, [
+            [100, 'shadowPentagon'], [30, 'shadowHexagonOfficialV1'], [10, 'shadowHeptagonOfficialV1'], [5, 'shadowOctagonOfficialV1'], [1, 'shadowNonagonOfficialV1']
+        ]],
+        [10, [
+            [100, 'rainbowPentagon'], [30, 'rainbowHexagonOfficialV1'], [10, 'rainbowHeptagonOfficialV1'], [5, 'rainbowOctagonOfficialV1'], [1, 'rainbowNonagonOfficialV1']
         ]],
         [1, [
-            [40, 'shinyPentagon'], [ 10, 'shinyHexagonOfficialV1'], [ 5, 'shinyHeptagonOfficialV1'], [ 2, 'shinyOctagonOfficialV1'], [ 1, 'shinyNonagonOfficialV1']
-        ]],
-        [1, [
-            [40, 'legendaryPentagon'], [ 10, 'legendaryHexagonOfficialV1'], [ 5, 'legendaryHeptagonOfficialV1'], [ 2, 'legendaryOctagonOfficialV1'], [ 1, 'legendaryNonagonOfficialV1']
-        ]],
-        [1, [
-            [40, 'shadowPentagon'], [ 10, 'shadowHexagonOfficialV1'], [ 5, 'shadowHeptagonOfficialV1'], [ 2, 'shadowOctagonOfficialV1'], [ 1, 'shadowNonagonOfficialV1']
-        ]],
-        [1, [
-            [40, 'rainbowPentagon'], [ 10, 'rainbowHexagonOfficialV1'], [ 5, 'rainbowHeptagonOfficialV1'], [ 2, 'rainbowOctagonOfficialV1'], [ 1, 'rainbowNonagonOfficialV1']
-        ]],
-        [1, [
-            [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
-        ]],
-        [1, [
-            [ 1, 'dodecahedron'], [1, 'icosahedron']
+            [100, 'abyssalPentagon'], [30, 'abyssalHexagonOfficialV1'], [10, 'abyssalHeptagonOfficialV1'], [5, 'abyssalOctagonOfficialV1'], [1, 'abyssalNonagonOfficialV1']
         ]]
     ],
 
