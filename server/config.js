@@ -189,7 +189,7 @@ module.exports = {
     FOOD_TYPES: [
         [2000, [
             [65, 'egg'], [45, 'square'], [50, 'triangle'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
-        ]],/*
+        ]],
         [2000, [
             [625, 'shinyEgg'], [25, 'shinySquare'], [125, 'shinyTriangle'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
         ]],
@@ -204,7 +204,7 @@ module.exports = {
         ]],
         [2000, [
             [62, 'abyssalEgg'], [2, 'abyssalSquare'], [12, 'abyssalTriangle'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
-        ]],*/
+        ]],
         [2000, [
             [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'octahedron'], [ 1, 'dodecahedron']
         ]]
@@ -214,7 +214,7 @@ module.exports = {
     FOOD_TYPES_NEST: [
         [1, [
             [40, 'pentagon'], [ 10, 'hexagonOfficialV1'], [ 5, 'heptagonOfficialV1'], [ 2, 'octagonOfficialV1'], [ 1, 'nonagonOfficialV1']
-        ]],/*
+        ]],
         [1, [
             [40, 'shinyPentagon'], [ 10, 'shinyHexagonOfficialV1'], [ 5, 'shinyHeptagonOfficialV1'], [ 2, 'shinyOctagonOfficialV1'], [ 1, 'shinyNonagonOfficialV1']
         ]],
@@ -229,7 +229,7 @@ module.exports = {
         ]],
         [1, [
             [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
-        ]],*/
+        ]],
         [1, [
             [ 1, 'dodecahedron'], [1, 'icosahedron']
         ]]
