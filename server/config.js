@@ -49,7 +49,7 @@ module.exports = {
             // Keep in mind that if "LOAD_ON_MAINSERVER" is set to true then this code will be replaced with the main server's port instead.
             PORT: 3001,
             // Get the gamemode you want to select with.
-            GAMEMODE: ["maze"],
+            GAMEMODE: ["ffa"],
             // The region, can be anything.
             REGION: "local",
             // How many players can join until it's full.
@@ -75,8 +75,8 @@ module.exports = {
     // Miscellaneous
 
     // The dimensions of a single tile on the map.
-    TILE_WIDTH: 100,
-    TILE_HEIGHT: 100,
+    TILE_WIDTH: 250,
+    TILE_HEIGHT: 250,
 
     // How long a chat message lasts in milliseconds.
     // Includes the fade-out period.
