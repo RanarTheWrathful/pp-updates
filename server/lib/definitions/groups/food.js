@@ -392,7 +392,7 @@ Class.tesseract = {
 
 // LABY
 let polyNames = ['egg', 'square', 'triangle', 'pentagon', 'hexagon'],
-    shinyNames = ['', 'shiny', 'legendary', 'shadow', 'rainbow', 'trans'];
+    shinyNames = ['', 'shiny', 'legendary', 'shadow', 'rainbow', 'abyssal'];
 for (let tier = 0; tier < 6; tier++) {
     for (let poly in polyNames) {
         let polyName = polyNames[poly];
