@@ -212,10 +212,10 @@ slow = 0.5 + 0.5 * Math.sin(t * 0.6),
 breath = 0.5 + 0.5 * Math.sin(t * 1.8),
 
 // micro instability (jitters the feeling)
-glitch = (Math.sin(t * 17.3) * Math.sin(t * 3.7)) * Math.random()*10,
+glitch = (Math.sin(t * 17.3) * Math.sin(t * 3.7)) * 0.08,
 
 // combine
-pulse = slow * 0.55 + breath * 0.35 + glitch;
+pulse = (slow * 0.55 + breath * 0.35 + glitch) * (Math.random() * 2);
         
         gameDraw.animatedColor.lesbian = gameDraw.getRainbow(lesbian_useSecondSet ? lesbian_oredange : lesbian_white, lesbian_useSecondSet ? lesbian_white : lesbian_magenta, (lesbian_useSecondSet ? five_bars : five_bars - 3) / 2);
         gameDraw.animatedColor.gay = gameDraw.hslToRgb(gay_transition, 0.75, 0.5);
