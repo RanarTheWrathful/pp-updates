@@ -203,7 +203,7 @@ module.exports = {
             [625, 'rainbowEgg'], [25, 'rainbowSquare'], [125, 'rainbowTriangle'], [5, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
         ]],
         [2000, [
-            [62, 'transEgg'], [2, 'transSquare'], [12, 'transTriangle'], [5, 'transPentagon'], [1, 'transHexagonOfficialV1']
+            [62, 'abyssalEgg'], [2, 'abyssalSquare'], [12, 'abyssalTriangle'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
         ]],
         [2000, [
             [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'octahedron'], [ 1, 'dodecahedron']
@@ -228,7 +228,7 @@ module.exports = {
             [40, 'rainbowPentagon'], [ 10, 'rainbowHexagonOfficialV1'], [ 5, 'rainbowHeptagonOfficialV1'], [ 2, 'rainbowOctagonOfficialV1'], [ 1, 'rainbowNonagonOfficialV1']
         ]],
         [1, [
-            [40, 'transPentagon'], [ 10, 'transHexagonOfficialV1'], [ 5, 'transHeptagonOfficialV1'], [ 2, 'transOctagonOfficialV1'], [ 1, 'transNonagonOfficialV1']
+            [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
         ]],
         [1, [
             [ 1, 'dodecahedron'], [1, 'icosahedron']
