@@ -464,7 +464,8 @@ var gameDraw = {
             case "animatedMagenta":
                 return gameDraw.animatedColor.magenta;
             case 43:
-            case "animatedMagenta":
+            case "animatedGray":
+            case "abyssalRainbow":
                 return gameDraw.animatedColor.gray;
 
             // Client / other
