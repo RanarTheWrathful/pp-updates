@@ -187,25 +187,25 @@ module.exports = {
 
     // The possible food types that can spawn.
     FOOD_TYPES: [
-        [2000, [
-            [65, 'egg'], [45, 'square'], [50, 'triangle'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
+        [100000, [
+            [100, 'egg'], [75, 'square'], [50, 'triangle'], [20, 'pentagon'], [5, 'hexagonOfficialV1']
         ]],
-        [2000, [
-            [625, 'shinyEgg'], [25, 'shinySquare'], [125, 'shinyTriangle'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
+        [10000, [
+            [100, 'shinyEgg'], [75, 'shinySquare'], [125, 'shinyTriangle'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
         ]],
-        [2000, [
+        [1000, [
             [1296, 'legendaryEgg'], [36, 'legendarySquare'], [216, 'legendaryTriangle'], [6, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
         ]],
-        [2000, [
+        [500, [
             [65, 'shadowEgg'], [45, 'shadowSquare'], [64, 'shadowTriangle'], [7, 'shadowPentagon'], [1, 'shadowHexagonOfficialV1']
         ]],
-        [2000, [
+        [100, [
             [625, 'rainbowEgg'], [25, 'rainbowSquare'], [125, 'rainbowTriangle'], [5, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
         ]],
-        [2000, [
+        [10, [
             [62, 'abyssalEgg'], [2, 'abyssalSquare'], [12, 'abyssalTriangle'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
         ]],
-        [2000, [
+        [10, [
             [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'octahedron'], [ 1, 'dodecahedron']
         ]]
     ],
