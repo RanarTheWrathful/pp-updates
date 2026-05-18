@@ -267,6 +267,7 @@ gameDraw.animatedColor.abyss = gameDraw.mixColors(trans_white, 2000 > now % 4000
         //Abyssal Rainbow
         43: true,
         abyss: true,
+        abyssalRainbow: true,
     },
     getColor: (colorNumber) => {
         if (colorNumber == undefined || colorNumber == null) return gameDraw.color.black;
