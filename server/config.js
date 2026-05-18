@@ -188,25 +188,25 @@ module.exports = {
     // The possible food types that can spawn.
     FOOD_TYPES: [
         [100000, [
-            [100, 'egg'], [75, 'square'], [50, 'triangle'], [20, 'pentagon'], [5, 'hexagonOfficialV1']
+            [100, 'egg'], [75, 'square'], [50, 'triangle'], [10, 'pentagon'], [1, 'hexagonOfficialV1']
         ]],
         [10000, [
-            [100, 'shinyEgg'], [75, 'shinySquare'], [125, 'shinyTriangle'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
+            [100, 'shinyEgg'], [75, 'shinySquare'], [50, 'shinyTriangle'], [10, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
         ]],
         [1000, [
-            [1296, 'legendaryEgg'], [36, 'legendarySquare'], [216, 'legendaryTriangle'], [6, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
+            [100, 'legendaryEgg'], [75, 'legendarySquare'], [50, 'legendaryTriangle'], [10, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
         ]],
         [500, [
-            [65, 'shadowEgg'], [45, 'shadowSquare'], [64, 'shadowTriangle'], [7, 'shadowPentagon'], [1, 'shadowHexagonOfficialV1']
+            [100, 'shadowEgg'], [75, 'shadowSquare'], [50, 'shadowTriangle'], [10, 'shadowPentagon'], [1, 'shadowHexagonOfficialV1']
         ]],
         [100, [
-            [625, 'rainbowEgg'], [25, 'rainbowSquare'], [125, 'rainbowTriangle'], [5, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
+            [100, 'rainbowEgg'], [75, 'rainbowSquare'], [50, 'rainbowTriangle'], [10, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
         ]],
         [10, [
-            [62, 'abyssalEgg'], [2, 'abyssalSquare'], [12, 'abyssalTriangle'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
+            [100, 'abyssalEgg'], [75, 'abyssalSquare'], [50, 'abyssalTriangle'], [10, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
         ]],
         [10, [
-            [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'octahedron'], [ 1, 'dodecahedron']
+            [100, 'sphere'], [75, 'cube'], [50, 'tetrahedron'], [10, 'octahedron'], [ 1, 'dodecahedron']
         ]]
     ],
 
