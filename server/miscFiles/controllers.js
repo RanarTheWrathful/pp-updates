@@ -784,7 +784,7 @@ class io_minion extends IO {
                 }
             } else if (input.main) {
                 // Orbit point
-                let dir = (this.turnwise * target.direction + 0.01
+                let dir = (this.turnwise * target.direction + 0.01)/2
                 goal = {
                     x: this.body.x + target.x - orbit * Math.cos(dir),
                     y: this.body.y + target.y - orbit * Math.sin(dir),
