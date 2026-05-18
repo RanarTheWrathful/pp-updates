@@ -821,10 +821,10 @@ exports.makeRare = (type, level) => {
         COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "abyssalRainbow"][level],
         ALPHA: level == 2 ? 0.25 : 1,
         BODY: {
-            DAMAGE: [1, 1, 2, 2.5, 2.5][level] * type.BODY.DAMAGE,
-            DENSITY: [1, 1, 2, 2.5, 2.5][level] * type.BODY.DENSITY,
-            HEALTH: [2, 4, 4, 6, 8][level] * type.BODY.HEALTH,
-            PENETRATION: [1.5, 1.5, 2, 2.5, 2.5][level] * type.BODY.PENETRATION,
+            DAMAGE: [1, 1, 2, 2.5, 5][level] * type.BODY.DAMAGE,
+            DENSITY: [1, 1, 2, 2.5, 100][level] * type.BODY.DENSITY,
+            HEALTH: [2, 3, 3, 5, 10][level] * type.BODY.HEALTH,
+            PENETRATION: type.BODY.PENETRATION,
             ACCELERATION: type.BODY.ACCELERATION
         },
         DRAW_HEALTH: true,
