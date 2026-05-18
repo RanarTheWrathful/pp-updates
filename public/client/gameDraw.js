@@ -200,9 +200,9 @@ var gameDraw = {
             trans_blue = "#55cdfc",
             trans_white = "#ffffff",
         
-            abyssRain1 = "#999999",
+            abyssRain1 = "#292929",
             abyssRain2 = "#000000",
-            abyssRain3 = "#363636",
+            abyssRain3 = "#3D3D3D",
         t = now / 1000,
 
 // slow “presence” drift (feels like something watching)
