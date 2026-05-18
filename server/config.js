@@ -192,7 +192,7 @@ module.exports = {
         ]],
         [2000, [
             [625, 'shinyEgg'], [25, 'shinySquare'], [125, 'shinyTriangle'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
-        ]],
+        ]],/*
         [2000, [
             [1296, 'legendaryEgg'], [36, 'legendarySquare'], [216, 'legendaryTriangle'], [6, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
         ]],
@@ -204,7 +204,7 @@ module.exports = {
         ]],
         [2000, [
             [62, 'abyssalEgg'], [2, 'abyssalSquare'], [12, 'abyssalTriangle'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
-        ]],
+        ]],*/
         [2000, [
             [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'octahedron'], [ 1, 'dodecahedron']
         ]]
@@ -217,7 +217,7 @@ module.exports = {
         ]],
         [1, [
             [40, 'shinyPentagon'], [ 10, 'shinyHexagonOfficialV1'], [ 5, 'shinyHeptagonOfficialV1'], [ 2, 'shinyOctagonOfficialV1'], [ 1, 'shinyNonagonOfficialV1']
-        ]],
+        ]],/*
         [1, [
             [40, 'legendaryPentagon'], [ 10, 'legendaryHexagonOfficialV1'], [ 5, 'legendaryHeptagonOfficialV1'], [ 2, 'legendaryOctagonOfficialV1'], [ 1, 'legendaryNonagonOfficialV1']
         ]],
@@ -229,7 +229,7 @@ module.exports = {
         ]],
         [1, [
             [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
-        ]],
+        ]],*/
         [1, [
             [ 1, 'dodecahedron'], [1, 'icosahedron']
         ]]
