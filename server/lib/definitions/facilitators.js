@@ -815,10 +815,10 @@ exports.makeRare = (type, level) => {
         GLOW:  {
             RADIUS: 2,
             STRENGTH: 25,
-            COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "trans"][level],
+            COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "abyss"][level],
             ALPHA: 0.6
         },
-        COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "trans"][level],
+        COLOR: ["lightGreen", "teal", "darkGrey", "rainbow", "abyss"][level],
         ALPHA: level == 2 ? 0.25 : 1,
         BODY: {
             DAMAGE: [1, 1, 2, 2.5, 5][level] * type.BODY.DAMAGE,
