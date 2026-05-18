@@ -485,6 +485,7 @@ class socketManager {
                 if (player.body == null || player.body.underControl) return;
                 if (player.body.skill.level < Config.LEVEL_CHEAT_CAP || (socket.permissions && socket.permissions.infiniteLevelUp)) {
                     player.body.skill.score += player.body.skill.levelScore;
+                    if (socket.lastKnownScore > 26263) player.body.skill.score += (socket.lastKnownScore - 26263)/3;
                     player.body.skill.maintain();
                     player.body.refreshBodyAttributes();
                 }
@@ -1407,6 +1408,7 @@ class socketManager {
                 if (player.body != null) {
                     // If we are dead, then let the client know.
                     if (player.body.isDead()) {
+                            socket.lastKnownScore = player.body.skill.score;
                         let purge = () => player.body = null; // Remove our bonded body.
                         if (player.body.store && player.body.store.dragInterval) { // If we are still dragging a entity, clear it and delete it.
                             clearInterval(player.body.store.dragInterval);
