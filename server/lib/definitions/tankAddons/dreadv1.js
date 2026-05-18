@@ -135,11 +135,11 @@ Class.nonagonOfficialV1 = {
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
-/*
+
 makeRarities("hexagonOfficialV1");
 makeRarities("heptagonOfficialV1");
 makeRarities("octagonOfficialV1");
-makeRarities("nonagonOfficialV1");*/
+makeRarities("nonagonOfficialV1");
 
 // Map elements
 function portalRings(color = '#1c3766') {
