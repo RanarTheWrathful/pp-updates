@@ -93,7 +93,7 @@ Class.heptagonOfficialV1 = {
     },
 	VALUE: 28000,
 	SHAPE: 7,
-	SIZE: 80,
+	SIZE: 90,
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
@@ -112,7 +112,7 @@ Class.octagonOfficialV1 = {
     },
 	VALUE: 35000,
 	SHAPE: 8,
-	SIZE: 90,
+	SIZE: 115,
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
@@ -131,7 +131,7 @@ Class.nonagonOfficialV1 = {
     },
 	VALUE: 42000,
 	SHAPE: 9,
-	SIZE: 100,
+	SIZE: 150,
 	DRAW_HEALTH: true,
     GIVE_KILL_MESSAGE: true,
 }
