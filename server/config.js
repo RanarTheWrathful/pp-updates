@@ -189,10 +189,10 @@ module.exports = {
     FOOD_TYPES: [
         [2000, [
             [65, 'egg'], [45, 'square'], [50, 'triangle'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
-        ]],
+        ]],/*
         [2000, [
             [625, 'shinyEgg'], [25, 'shinySquare'], [125, 'shinyTriangle'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
-        ]],/*
+        ]],
         [2000, [
             [1296, 'legendaryEgg'], [36, 'legendarySquare'], [216, 'legendaryTriangle'], [6, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
         ]],
@@ -214,10 +214,10 @@ module.exports = {
     FOOD_TYPES_NEST: [
         [1, [
             [40, 'pentagon'], [ 10, 'hexagonOfficialV1'], [ 5, 'heptagonOfficialV1'], [ 2, 'octagonOfficialV1'], [ 1, 'nonagonOfficialV1']
-        ]],
+        ]],/*
         [1, [
             [40, 'shinyPentagon'], [ 10, 'shinyHexagonOfficialV1'], [ 5, 'shinyHeptagonOfficialV1'], [ 2, 'shinyOctagonOfficialV1'], [ 1, 'shinyNonagonOfficialV1']
-        ]],/*
+        ]],
         [1, [
             [40, 'legendaryPentagon'], [ 10, 'legendaryHexagonOfficialV1'], [ 5, 'legendaryHeptagonOfficialV1'], [ 2, 'legendaryOctagonOfficialV1'], [ 1, 'legendaryNonagonOfficialV1']
         ]],
