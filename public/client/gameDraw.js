@@ -189,10 +189,8 @@ var gameDraw = {
             lesbian_oredange = "#d62900",
             lesbian_white = "#ffffff",
             lesbian_useSecondSet = five_bars < 2,
-            gray_transition = (now / 2000) % 1,
             gay_transition = (now / 2000) % 1,
 
-            lightness = 0.05 + Math.abs(Math.sin(gray_transition * Math.PI * 2)) * 0.35,
             ratio = (Math.sin(now / 2000 * Math.PI)) / 2 + 0.5,
             light_purple = { h: 258 / 360, s: 1, l: 0.84 },
             purple = { h: 265 / 360, s: 0.69, l: 0.47 },
@@ -203,13 +201,17 @@ var gameDraw = {
 
         gameDraw.animatedColor.lesbian = gameDraw.getRainbow(lesbian_useSecondSet ? lesbian_oredange : lesbian_white, lesbian_useSecondSet ? lesbian_white : lesbian_magenta, (lesbian_useSecondSet ? five_bars : five_bars - 3) / 2);
         gameDraw.animatedColor.gay = gameDraw.hslToRgb(gay_transition, 0.75, 0.5);
-        gameDraw.animatedColor.gray = gameDraw.hslToRgb(gray_transition, 0.75, lightness);
         // gameDraw.animatedColor.trans = [trans_blue, trans_pink, trans_white, trans_pink, trans_blue][five_bars];
         gameDraw.animatedColor.trans = gameDraw.mixColors(trans_white, 2000 > now % 4000 ? trans_blue : trans_pink, Math.max(Math.min(5 * Math.sin(now % 2000 / 2000 * Math.PI) - 2, 1), 0)); // Animated!
         gameDraw.animatedColor.magenta = gameDraw.hslToRgb(
             light_purple.h + (purple.h - light_purple.h) * ratio,
             light_purple.s + (purple.s - light_purple.s) * ratio,
             light_purple.l + (purple.l - light_purple.l) * ratio
+        );     
+        gameDraw.animatedColor.gray = gameDraw.hslToRgb(
+            pureBlack.h + (gray.h - pureBlack.h) * ratio,
+            pureBlack.s + (gray.s - pureBlack.s) * ratio,
+            pureBlack.l + (gray.l - pureBlack.l) * ratio
         );
 
         gameDraw.animatedColor.blue_red = blinker ? gameDraw.color.blue : gameDraw.color.red;
@@ -465,6 +467,7 @@ var gameDraw = {
                 return gameDraw.animatedColor.magenta;
             case 43:
             case "animatedGray":
+            case "animatedGrey":
             case "abyssalRainbow":
                 return gameDraw.animatedColor.gray;
 
