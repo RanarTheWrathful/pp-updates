@@ -188,25 +188,25 @@ module.exports = {
     // The possible food types that can spawn.
     FOOD_TYPES: [
         [2000, [
-            [65, 'egg'], [50, 'triangle'], [45, 'square'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
+            [65, 'egg'], [45, 'square'], [50, 'triangle'], [7, 'pentagon'], [1, 'hexagonOfficialV1']
         ]],
         [2000, [
-            [625, 'shinyEgg'], [125, 'shinyTriangle'], [25, 'shinySquare'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
+            [625, 'shinyEgg'], [25, 'shinySquare'], [125, 'shinyTriangle'], [5, 'shinyPentagon'], [1, 'shinyHexagonOfficialV1']
         ]],
         [2000, [
-            [1296, 'legendaryEgg'], [216, 'legendaryTriangle'], [36, 'legendarySquare'], [6, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
+            [1296, 'legendaryEgg'], [36, 'legendarySquare'], [216, 'legendaryTriangle'], [6, 'legendaryPentagon'], [1, 'legendaryHexagonOfficialV1']
         ]],
         [2000, [
-            [65, 'shadowEgg'], [64, 'shadowTriangle'], [45, 'shadowSquare'], [7, 'shadowPentagon'], [1, 'shadowHexagonOfficialV1']
+            [65, 'shadowEgg'], [45, 'shadowSquare'], [64, 'shadowTriangle'], [7, 'shadowPentagon'], [1, 'shadowHexagonOfficialV1']
         ]],
         [2000, [
-            [625, 'rainbowEgg'], [125, 'rainbowTriangle'], [25, 'rainbowSquare'], [5, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
+            [625, 'rainbowEgg'], [25, 'rainbowSquare'], [125, 'rainbowTriangle'], [5, 'rainbowPentagon'], [1, 'rainbowHexagonOfficialV1']
         ]],
         [2000, [
-            [62, 'abyssalEgg'], [12, 'abyssalTriangle'], [2, 'abyssalSquare'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
+            [62, 'abyssalEgg'], [2, 'abyssalSquare'], [12, 'abyssalTriangle'], [5, 'abyssalPentagon'], [1, 'abyssalHexagonOfficialV1']
         ]],
-        [1, [
-            [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'icosehedron'], [ 1, 'abyssalNonagonOfficialV1']
+        [2000, [
+            [40, 'sphere'], [ 10, 'cube'], [ 5, 'tetrahedron'], [ 2, 'octahedron'], [ 1, 'dodecahedron']
         ]]
     ],
 
@@ -231,8 +231,8 @@ module.exports = {
             [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
         ]],
         [1, [
-            [40, 'abyssalPentagon'], [ 10, 'abyssalHexagonOfficialV1'], [ 5, 'abyssalHeptagonOfficialV1'], [ 2, 'abyssalOctagonOfficialV1'], [ 1, 'abyssalNonagonOfficialV1']
-        ]],
+            [ 1, 'dodecahedron'], [1, 'icosahedron']
+        ]]
     ],
 
     // The possible nest enemy types that can spawn.
