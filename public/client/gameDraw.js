@@ -198,21 +198,20 @@ var gameDraw = {
             trans_pink = "#f7a8b8",
             trans_blue = "#55cdfc",
             trans_white = "#ffffff";
-
+        
+            abyssRain1 = "#666666",
+            abyssRain2 = "#363636",
+            abyssRain3 = "#000000";
+        
         gameDraw.animatedColor.lesbian = gameDraw.getRainbow(lesbian_useSecondSet ? lesbian_oredange : lesbian_white, lesbian_useSecondSet ? lesbian_white : lesbian_magenta, (lesbian_useSecondSet ? five_bars : five_bars - 3) / 2);
         gameDraw.animatedColor.gay = gameDraw.hslToRgb(gay_transition, 0.75, 0.5);
-        // gameDraw.animatedColor.trans = [trans_blue, trans_pink, trans_white, trans_pink, trans_blue][five_bars];
         gameDraw.animatedColor.trans = gameDraw.mixColors(trans_white, 2000 > now % 4000 ? trans_blue : trans_pink, Math.max(Math.min(5 * Math.sin(now % 2000 / 2000 * Math.PI) - 2, 1), 0)); // Animated!
+        gameDraw.animatedColor.gray = gameDraw.mixColors(abyssRain1, 1000 > now % 2000 ? abyssRain2 : abyssRain3, Math.max(Math.min(5 * Math.sin(now % 1000 / 1000 * Math.PI) - 2, 1), 0)); // Animated!
         gameDraw.animatedColor.magenta = gameDraw.hslToRgb(
             light_purple.h + (purple.h - light_purple.h) * ratio,
             light_purple.s + (purple.s - light_purple.s) * ratio,
             light_purple.l + (purple.l - light_purple.l) * ratio
         );     
-        gameDraw.animatedColor.gray = gameDraw.hslToRgb(
-            pureBlack.h + (gray.h - pureBlack.h) * ratio,
-            pureBlack.s + (gray.s - pureBlack.s) * ratio,
-            pureBlack.l + (gray.l - pureBlack.l) * ratio
-        );
 
         gameDraw.animatedColor.blue_red = blinker ? gameDraw.color.blue : gameDraw.color.red;
         gameDraw.animatedColor.blue_grey = blinker ? gameDraw.color.blue : gameDraw.color.grey;
