@@ -1561,6 +1561,7 @@ Class.flace = {
     SKILL_CAP: [dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl, dfltskl],
 }
 // Upgrade Tree
+Class.basic.UPGRADES_TIER_0 = ["spectator"]
 Class.developer.UPGRADES_TIER_0 = ["tanks", "bosses", "spectator", "levels", "teams", "eggGenerator", "testing", "addons", "shinyMenu"]
     Class.tanks.UPGRADES_TIER_0 = ["basic", "unavailable", "arenaCloser", "dominators", "sanctuaries", "mothership", "baseProtector", "antiTankMachineGun"]
         Class.unavailable.UPGRADES_TIER_0 = ["flail", "jumpSmasher", "healer", "literallyAMachineGun", "literallyATank", "master"]
