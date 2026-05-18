@@ -353,11 +353,11 @@ class gameHandler {
     }
 
     regenHealthAndShield() {
-        for (let instance of entities.values() && instance.REGEN > 0) {
-            if (instance.shield.max) {
+        for (let instance of entities.values()) {
+            if (instance.shield.max && instance.REGEN > 0) {
                 instance.shield.regenerate();
             }
-            if (instance.health.amount) {
+            if (instance.health.amount && instance.REGEN > 0) {
                 instance.health.regenerate(instance.shield.max && instance.shield.max === instance.shield.amount);
             }
         }
