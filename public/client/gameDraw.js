@@ -198,7 +198,7 @@ var gameDraw = {
 
             trans_pink = "#f7a8b8",
             trans_blue = "#55cdfc",
-            trans_white = "#ffffff";
+            trans_white = "#ffffff",
         
             abyssRain1 = "#ffffff",
             abyssRain2 = "#666666",
