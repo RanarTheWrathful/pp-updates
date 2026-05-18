@@ -6,11 +6,11 @@ const g = require('../gunvals.js');
 
 const shapeGeneratorUpgrades = [
 	["eggGenerator", "gemGen", "gravelGen", "stoneGen", "rockGen", "wallGen"],
-	["squareGen", "shinySquareGen", "legSquareGen", "shadowSquareGen", "rainbowSquareGen", "transSquareGen"],
-	["triangleGen", "shinyTriangleGen", "legTriangleGen", "shadowTriangleGen", "rainbowTriangleGen", "transTriangleGen"],
-	["pentagonGen", "shinyPentagonGen", "legPentagonGen", "shadowPentagonGen", "rainbowPentagonGen", "transPentagonGen"],
-	["betaPentagonGen", "shinyBetaPentagonGen", "legBetaPentagonGen", "shadowBetaPentagonGen", "rainbowBetaPentagonGen", "transBetaPentagonGen"],
-	["alphaPentagonGen", "shinyAlphaPentagonGen", "legAlphaPentagonGen", "shadowAlphaPentagonGen", "rainbowAlphaPentagonGen", "transAlphaPentagonGen"],
+	["squareGen", "shinySquareGen", "legSquareGen", "shadowSquareGen", "rainbowSquareGen", "abyssalSquareGen"],
+	["triangleGen", "shinyTriangleGen", "legTriangleGen", "shadowTriangleGen", "rainbowTriangleGen", "abyssalTriangleGen"],
+	["pentagonGen", "shinyPentagonGen", "legPentagonGen", "shadowPentagonGen", "rainbowPentagonGen", "abyssalPentagonGen"],
+	["betaPentagonGen", "shinyBetaPentagonGen", "legBetaPentagonGen", "shadowBetaPentagonGen", "rainbowBetaPentagonGen", "abyssalBetaPentagonGen"],
+	["alphaPentagonGen", "shinyAlphaPentagonGen", "legAlphaPentagonGen", "shadowAlphaPentagonGen", "rainbowAlphaPentagonGen", "abyssalAlphaPentagonGen"],
 ];
 const hostileShapeGeneratorUpgrades = [
 	["crasherGen", "sentrySwarmGen", "sentryGunGen", "sentryTrapGen"],
@@ -153,7 +153,7 @@ Class.shinySquareGen = makeGenerator("shinySquare", "Shiny Square", "square", 6,
 Class.legSquareGen = makeGenerator("legendarySquare", "Legendary Square", "square", 6, 4, "teal", Class.square.SIZE)
 Class.shadowSquareGen = makeGenerator("shadowSquare", "Shadow Square", "square", 6, 4, "pureBlack", Class.square.SIZE)
 Class.rainbowSquareGen = makeGenerator("rainbowSquare", "Rainbow Legendary Square", "square", 6, 4, "rainbow", Class.square.SIZE)
-Class.transSquareGen = makeGenerator("transSquare", "Trans Legendary Square", "square", 6, 4, 37, Class.square.SIZE)
+Class.abyssalSquareGen = makeGenerator("abyssalSquare", "Abyssal Legendary Square", "square", 6, 4, "abyssalRainbow", Class.square.SIZE)
 
 //TRIANGLE GENERATORS
 Class.triangleGen = makeGenerator("triangle", "Triangle", "triangle", 6, 3, "orange", Class.triangle.SIZE)
@@ -161,7 +161,7 @@ Class.shinyTriangleGen = makeGenerator("shinyTriangle", "Shiny Triangle", "trian
 Class.legTriangleGen = makeGenerator("legendaryTriangle", "Legendary Triangle", "triangle", 6, 3, "teal", Class.triangle.SIZE)
 Class.shadowTriangleGen = makeGenerator("shadowTriangle", "Shadow Triangle", "triangle", 6, 3, "pureBlack", Class.triangle.SIZE)
 Class.rainbowTriangleGen = makeGenerator("rainbowTriangle", "Rainbow Legendary Triangle", "triangle", 6, 3, "rainbow", Class.triangle.SIZE)
-Class.transTriangleGen = makeGenerator("transTriangle", "Trans Legendary Triangle", "triangle", 6, 3, 37, Class.triangle.SIZE)
+Class.abyssalTriangleGen = makeGenerator("abyssalTriangle", "Abyssal Legendary Triangle", "triangle", 6, 3, "abyssalRainbow", Class.triangle.SIZE)
 
 //PENTAGON GENERATORS
 Class.pentagonGen = makeGenerator("pentagon", "Pentagon", "pentagon", 8, 5, "purple", Class.pentagon.SIZE)
@@ -169,21 +169,21 @@ Class.shinyPentagonGen = makeGenerator("shinyPentagon", "Shiny Pentagon", "penta
 Class.legPentagonGen = makeGenerator("legendaryPentagon", "Legendary Pentagon", "pentagon", 8, 5, "teal", Class.pentagon.SIZE)
 Class.shadowPentagonGen = makeGenerator("shadowPentagon", "Shadow Pentagon", "pentagon", 8, 5, "pureBlack", Class.pentagon.SIZE)
 Class.rainbowPentagonGen = makeGenerator("rainbowPentagon", "Rainbow Legendary Pentagon", "pentagon", 8, 5, "rainbow", Class.pentagon.SIZE)
-Class.transPentagonGen = makeGenerator("transPentagon", "Trans Legendary Pentagon", "pentagon", 8, 5, 37, Class.pentagon.SIZE)
+Class.abyssalPentagonGen = makeGenerator("abyssalPentagon", "Abyssal Legendary Pentagon", "pentagon", 8, 5, "abyssalRainbow", Class.pentagon.SIZE)
 //beta
 Class.betaPentagonGen = makeGenerator("betaPentagon", "Beta Pentagon", "pentagon", 12, 5, "purple", Class.betaPentagon.SIZE + 15)
 Class.shinyBetaPentagonGen = makeGenerator("shinyBetaPentagon", "Shiny Beta Pentagon", "pentagon", 12, 5, "lightGreen", Class.betaPentagon.SIZE + 15)
 Class.legBetaPentagonGen = makeGenerator("legendaryBetaPentagon", "Legendary Beta Pentagon", "pentagon", 12, 5, "teal", Class.betaPentagon.SIZE + 15)
 Class.shadowBetaPentagonGen = makeGenerator("shadowBetaPentagon", "Shadow Beta Pentagon", "pentagon", 12, 5, "pureBlack", Class.betaPentagon.SIZE + 15)
 Class.rainbowBetaPentagonGen = makeGenerator("rainbowBetaPentagon", "Rainbow Legendary Beta Pentagon", "pentagon", 12, 5, "rainbow", Class.betaPentagon.SIZE + 15)
-Class.transBetaPentagonGen = makeGenerator("transBetaPentagon", "Trans Legendary Beta Pentagon", "pentagon", 12, 5, 37, Class.betaPentagon.SIZE + 15)
+Class.abyssalBetaPentagonGen = makeGenerator("abyssalBetaPentagon", "Abyssal Legendary Beta Pentagon", "pentagon", 12, 5, "abyssalRainbow", Class.betaPentagon.SIZE + 15)
 //alpha
 Class.alphaPentagonGen = makeGenerator("alphaPentagon", "Alpha Pentagon", "pentagon", 15, 5, "purple", Class.alphaPentagon.SIZE + 25)
 Class.shinyAlphaPentagonGen = makeGenerator("shinyAlphaPentagon", "Shiny Alpha Pentagon", "pentagon", 15, 5, "lightGreen", Class.alphaPentagon.SIZE + 30)
 Class.legAlphaPentagonGen = makeGenerator("legendaryAlphaPentagon", "Legendary Alpha Pentagon", "pentagon", 15, 5, "teal", Class.alphaPentagon.SIZE + 40)
 Class.shadowAlphaPentagonGen = makeGenerator("shadowAlphaPentagon", "Shadow Alpha Pentagon", "pentagon", 15, 5, "pureBlack", Class.alphaPentagon.SIZE + 50)
 Class.rainbowAlphaPentagonGen = makeGenerator("rainbowAlphaPentagon", "Rainbow Legendary Alpha Pentagon", "pentagon", 15, 5, "rainbow", Class.alphaPentagon.SIZE + 70)
-Class.transAlphaPentagonGen = makeGenerator("transAlphaPentagon", "Trans Legendary Alpha Pentagon", "pentagon", 15, 5, 37, Class.alphaPentagon.SIZE + 90)
+Class.abyssalAlphaPentagonGen = makeGenerator("abyssalAlphaPentagon", "Abyssal Legendary Alpha Pentagon", "pentagon", 15, 5, "abyssalRainbow", Class.alphaPentagon.SIZE + 90)
 
 //MISC GENERATORS
 Class.gemGen = makeGenerator("gem", "Gem", "gem", 4.75, 6, "teal", Class.gem.SIZE, 100, 0)
