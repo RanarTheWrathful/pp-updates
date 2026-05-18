@@ -212,7 +212,7 @@ slow = 0.5 + 0.5 * Math.sin(t * 0.6),
 breath = 0.5 + 0.5 * Math.sin(t * 1.8),
 
 // micro instability (jitters the feeling)
-glitch = (Math.sin(t * 17.3) * Math.sin(t * 3.7)) * 0.08,
+glitch = (Math.sin(t * 17.3) * Math.sin(t * 3.7)) * 0.8,
 
 // combine
 pulse = slow * 0.55 + breath * 0.35 + glitch;
