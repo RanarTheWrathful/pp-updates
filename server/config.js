@@ -12,7 +12,7 @@ if (serverMode === "render") {
   LOGS = false;
 } else if (serverMode === "local") {
   LOAD_ON_MAINSERVER = false;
-  host = "localhost:3000";
+  //host = "localhost:3000";
   HALLOWEEN_THEME = true;
   LOGS = true;
 }
