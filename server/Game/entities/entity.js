@@ -1187,7 +1187,7 @@ class Entity extends EventEmitter {
 
             for (let i = 0; i < this.collisionArray.length; i++) {
                 let instance = this.collisionArray[i];
-                if (instance.type === 'wall' || !instance.damage) continue;
+                if (instance.type === 'wall' || !instance.damage || instance.invuln) continue;
                 damageInflictor.push(instance.master)
                 damageTool.push(instance)
             }
