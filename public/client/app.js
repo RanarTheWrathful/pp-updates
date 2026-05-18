@@ -189,6 +189,7 @@ import * as socketStuff from "./socketinit.js";
             document.getElementById("optRenderHealth").checked = true;
             document.getElementById("optRenderScores").checked = true;
             document.getElementById("optFancy").checked = true;
+            document.getElementById("autoLevelUp").checked = true;
             if (global.mobile) document.getElementById("showCrosshair").checked = true, document.getElementById("showJoystick").checked = true;
         }
         if (document.getElementById("optBorders").value === "") {
