@@ -757,7 +757,7 @@ class io_minion extends IO {
             let sizeFactor = Math.sqrt(this.body.master.size / this.body.master.SIZE)
             let leash = 50 * sizeFactor
             let orbit = this.opts.turnwiserange ?? 150 * sizeFactor
-            let repel = (71 * sizeFactor)/10
+            let repel = 5
             let goal
             let power = 1
             let target = new Vector(input.target.x, input.target.y)
