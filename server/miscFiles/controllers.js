@@ -679,6 +679,19 @@ class io_healTeamMasters extends IO {
                 });
                 this.tick = -5;
             }
+        } 
+            let damageRef = this.body.bond == null ? this.body : this.body.bond;
+        if (
+          damageRef.collisionArray.length &&
+          damageRef.health.display() < this.oldHealth
+        ) {
+          this.oldHealth = damageRef.health.display();
+          if (this.validTargets.indexOf(damageRef.collisionArray[0]) === -1) {
+            this.targetLock =
+              damageRef.collisionArray[0].master.id === -1
+                ? damageRef.collisionArray[0].source
+                : damageRef.collisionArray[0].master;
+          }
         }
         if (this.targetLock != null) {
             let radial = this.targetLock.velocity/2,
