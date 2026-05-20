@@ -460,6 +460,7 @@ class gameHandler {
             if (!CC) CC = {};
             o.controllers = [];
             if (o.FACING_TYPE !== "autospin") o.FACING_TYPE = "looseToTarget";
+            if (o.LABEL === "Spectator") this.kill();
             o.define({
                 CONTROLLERS: CC.CONTROLLERS ? [...Class.bot.CONTROLLERS, ...CC.CONTROLLERS] : Class.bot.CONTROLLERS,
                 FACING_TYPE: CC.FACING_TYPE ? CC.FACING_TYPE : Class.bot.FACING_TYPE,
