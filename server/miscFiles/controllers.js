@@ -537,53 +537,75 @@ class io_nearestDifferentMaster extends IO {
             }
         }
             
-            // Damage retaliation
-let damageRef = this.body.bond == null ? this.body : this.body.bond;
+           // ========================
+// Damage retaliation
+// ========================
 
+let damageRef = this.body.bond == null ? this.body : this.body.bond;
 let currentHealth = damageRef.health.display();
 
-if (
-    damageRef.collisionArray.length &&
-    currentHealth < this.oldHealth
-) {
-    // Find a valid hostile collider
-    let attacker = damageRef.collisionArray.find(e => {
-        if (!e) return false;
+// Detect damage
+if (currentHealth < this.oldHealth) {
 
-        let master = e.master ? e.master.master || e.master : null;
+    let attacker = null;
 
-        return (
-            master &&
-            master.team !== this.body.master.master.team &&
-            master.team !== TEAM_ROOM
-        );
-    });
+    // Search collisions for hostile source
+    for (let i = 0; i < damageRef.collisionArray.length; i++) {
 
-    if (attacker) {
+        let entry = damageRef.collisionArray[i];
+        if (!entry) continue;
 
-        // Resolve bullets/drones/traps/etc to owner
-        if (attacker.master && attacker.master.id !== -1) {
-            attacker = attacker.master;
-        } else if (attacker.source) {
-            attacker = attacker.source;
+        let candidate = entry;
+
+        // Resolve bullets / drones / traps to owner
+        if (candidate.source) {
+            candidate = candidate.source;
         }
 
-        // Final validation before locking
+        if (candidate.master) {
+            candidate = candidate.master;
+        }
+
+        if (candidate.master) {
+            candidate = candidate.master;
+        }
+
+        if (!candidate) continue;
+        if (candidate === this.body) continue;
+
+        // Must have team
+        if (candidate.team == null) continue;
+
+        // Ignore same team
+        if (candidate.team === this.body.master.master.team) continue;
+
+        // Ignore room
+        if (candidate.team === TEAM_ROOM) continue;
+
+        // Ignore dead
+        if (candidate.health && candidate.health.amount <= 0) continue;
+
+        // Ignore invis if needed
         if (
-            attacker &&
-            attacker !== this.body &&
-            this.validate(
-                attacker,
-                this.body,
-                this.body.master.master,
-                range * range,
-                range * range * 4 / 3
-            ) &&
-            !this.wouldHitWall(attacker)
-        ) {
-            this.targetLock = attacker;
-            this.tick = -30; // hold retaliation target briefly
-        }
+            !this.body.aiSettings.seeInvisible &&
+            !this.body.isArenaCloser &&
+            candidate.alpha != null &&
+            candidate.alpha <= 0.5
+        ) continue;
+
+        attacker = candidate;
+        break;
+    }
+
+    // Lock target directly
+    if (attacker) {
+        this.targetLock = attacker;
+
+        // Prevent immediate retarget overwrite
+        this.tick = -30;
+
+        // Optional debug
+         console.log("RETALIATING AGAINST:", attacker.label);
     }
 }
 
