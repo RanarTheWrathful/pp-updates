@@ -536,19 +536,60 @@ class io_nearestDifferentMaster extends IO {
                 this.tick = -5;
             }
         }
-            let damageRef = this.body.bond == null ? this.body : this.body.bond;
-        if (
-          damageRef.collisionArray.length &&
-          damageRef.health.display() < this.oldHealth
-        ) {
-          this.oldHealth = damageRef.health.display();
-          if (this.validTargets.indexOf(damageRef.collisionArray[0]) === -1) {
-            this.targetLock =
-              damageRef.collisionArray[0].master.id === -1
-                ? damageRef.collisionArray[0].source
-                : damageRef.collisionArray[0].master;
-          }
+            
+            // Damage retaliation
+let damageRef = this.body.bond == null ? this.body : this.body.bond;
+
+let currentHealth = damageRef.health.display();
+
+if (
+    damageRef.collisionArray.length &&
+    currentHealth < this.oldHealth
+) {
+    // Find a valid hostile collider
+    let attacker = damageRef.collisionArray.find(e => {
+        if (!e) return false;
+
+        let master = e.master ? e.master.master || e.master : null;
+
+        return (
+            master &&
+            master.team !== this.body.master.master.team &&
+            master.team !== TEAM_ROOM
+        );
+    });
+
+    if (attacker) {
+
+        // Resolve bullets/drones/traps/etc to owner
+        if (attacker.master && attacker.master.id !== -1) {
+            attacker = attacker.master;
+        } else if (attacker.source) {
+            attacker = attacker.source;
         }
+
+        // Final validation before locking
+        if (
+            attacker &&
+            attacker !== this.body &&
+            this.validate(
+                attacker,
+                this.body,
+                this.body.master.master,
+                range * range,
+                range * range * 4 / 3
+            ) &&
+            !this.wouldHitWall(attacker)
+        ) {
+            this.targetLock = attacker;
+            this.tick = -30; // hold retaliation target briefly
+        }
+    }
+}
+
+// Always update old health
+this.oldHealth = currentHealth;
+            
         if (this.targetLock != null) {
             let radial = this.targetLock.velocity,
                 diff = {
